@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Principale {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
+        PlusGrandeValeur valeur = new PlusGrandeValeur();
+        PlusGrandeValeurList valeurList = new PlusGrandeValeurList();
 
         while (true) {
             System.out.println("Veuillez sélectionner une option :");
@@ -17,6 +19,7 @@ public class Principale {
 
             switch (choice) {
                 case 1:
+                    valeur.tableau();
                     break;
 
                 case 2:
