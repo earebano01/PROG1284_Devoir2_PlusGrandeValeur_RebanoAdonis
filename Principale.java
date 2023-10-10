@@ -23,6 +23,7 @@ public class Principale {
                     break;
 
                 case 2:
+                    valeurList.tableau();
                     break;
 
                 case 3:
