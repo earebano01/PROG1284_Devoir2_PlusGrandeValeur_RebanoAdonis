@@ -29,4 +29,15 @@ public class PlusGrandeValeurList {
        return h;
    }
 
+   public void tableau() {
+       int[] index = new int[15];
+
+       for (int i = 0; i < index.length; i++) {
+           int randomNumber = rand();
+           tableauArray.add(randomNumber);
+           System.out.println("Tableaux [" + (i + 0) + "] = " + randomNumber);
+       }
+       System.out.println("");
+   }
+
 }
