@@ -38,4 +38,30 @@ public class PlusGrandeValeur {
             System.out.println("Tableaux [" + (i + 0) + "] = " + randomNumber);
         } System.out.println("");
     }
+ 
+    public void grande() {
+        int max;
+        max = tableauArray.get(0);
+ 
+        for (int i = 0; i < tableauArray.size(); i++) {
+            if (tableauArray.get(i) > max) {
+                max = tableauArray.get(i);
+             }
+         }   System.out.println("\nLe plus grand nombre du tableau est : " + max);
+     }
+ 
+     public void inx() {
+         int inx;
+         inx = tableauArray.get(0);
+         int grandeInx = 0;
+
+         for (int i = 0; i < tableauArray.size(); i++) {
+             int currentvalue = tableauArray.get(i);
+             if (currentvalue > inx) {
+                 inx = currentvalue;
+                 grandeInx = i;
+             }
+         }
+         System.out.println("\nIl est a l'index : " + grandeInx + "\n");
+     }
  }

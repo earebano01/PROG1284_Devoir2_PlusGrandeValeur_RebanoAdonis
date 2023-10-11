@@ -20,6 +20,8 @@ public class Principale {
             switch (choice) {
                 case 1:
                     valeur.tableau();
+                    valeur.grande();
+                    valeur.inx();
                     break;
 
                 case 2:
