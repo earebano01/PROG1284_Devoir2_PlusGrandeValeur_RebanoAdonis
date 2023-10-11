@@ -26,6 +26,8 @@ public class Principale {
 
                 case 2:
                     valeurList.tableau();
+                    valeurList.grande();
+                    valeurList.inx();
                     break;
 
                 case 3:
