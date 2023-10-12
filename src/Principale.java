@@ -1,16 +1,21 @@
-/*
-Titre : Plus Grande Valeur
-Auteur: Adonis Rebano
-Date : 11/10/2023
-Description : Dans ce programme, on a un tableau de 15 cellules qu'on a initialisé avec des valeurs 
-aléatoires (des entiers de 0 à 100). Le programme affiche ensuite les valeurs du tableau en sortie. 
-Enfin, le programme affiche la plus grande valeur enregistrée dans le tableau ainsi que l'index de la 
-cellule contenant cette valeur.
+/**
+* <h1>Plus Grande Valeur</h1>
+* Dans ce programme, on a un tableau de 15 cellules qu'on a initialisé avec des valeurs 
+*aléatoires (des entiers de 0 à 100). Le programme affiche ensuite les valeurs du tableau en sortie. 
+*Enfin, le programme affiche la plus grande valeur enregistrée dans le tableau ainsi que l'index de la 
+*cellule contenant cette valeur.
+*
+* @author   Adonis Rebano
+* @version  1.0
+* @since    11/10/2023
 */
 
 import java.util.Scanner;
 
 public class Principale {
+    /**
+     * C'est la methode principale qui utilises les méthodes PlusGrandeValeur et PlusGrandeValeurList
+     */
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         PlusGrandeValeur valeur = new PlusGrandeValeur();       // On crée une instance de la classe PlusGrandeValeur.
@@ -31,15 +36,13 @@ public class Principale {
                 case 1:     
                     // On appelle la méthode qu'on a créé dans notre class PlusGrandeValeur (version ArrayList).
                     valeur.tableau();
-                    valeur.grande();
-                    valeur.inx();
+                    valeur.grandeInx();
                     break;
 
                 case 2:     
                     // On appelle la méthode qu'on a créé dans notre class PlusGrandeValeurList (version LinkedList).
                     valeurList.tableau();
-                    valeurList.grande();
-                    valeurList.inx();
+                    valeurList.grandeInx();
                     break;
 
                 case 3:     

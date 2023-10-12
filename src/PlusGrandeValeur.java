@@ -2,62 +2,81 @@ import objet.ArrayList;
 import java.util.Random;
 
 public class PlusGrandeValeur {
-   
-   // On declare une liste de tableaux (ArrayList) privée pour stocker les entiers.
-   private ArrayList<Integer> tableauArray;         
-   
-   // Voici le constructeur qui initialise la liste de tableaux.
-   public PlusGrandeValeur() {
-       this.tableauArray = new ArrayList<>();       
+    // On declare une liste de tableaux (ArrayList) privée pour stocker les entiers.
+    private ArrayList<Integer> tableauArray;
+
+    // Voici le constructeur qui initialise la liste de tableaux.
+    public PlusGrandeValeur() {
+        this.tableauArray = new ArrayList<>();
     }
-    
-    // On a créé une methode pour génèrer un nombre entier aléatoire entre 0 et 100.
-    public static int rand() {                      
+
+    public static int rand() {
+        /**
+         * cette méthode est utilisée pour générer des nombres aléatoires entre 0-100
+         * à l'aide de la classe random.
+         * 
+         * @oaram hasard C'est un nom du notre classe pour générer des nombre aléatoire
+         * @param h C'est le parametre pour stocker le nombre aléatoire
+         * @return h C'est retourne le nombre aléatoire
+         */
         Random hasard = new Random();
         int h = 0;
         while (true) {
-            h = hasard.nextInt(101);       // Génère un entier aléatoire entre 0 et 100. 
+            h = hasard.nextInt(101); // Génère un entier aléatoire entre 0 et 100.
             if (h != 0)
-            break;
+                break;
         }
-        return h;       // Retourne l'entier aléatoire généré.
+        return h;
     }
-    
-    // On a créé une methode pour un tableau de 15 cellules qu'on initialise avec des nombres aléatoires 
-    public void tableau() {
-        int[] index = new int[15];      // Déclaration d'un tableau d'entiers avec 15 éléments.
- 
-        for (int i = 0; i < index.length; i++) {
-             int randomNumber = rand();         // On appelle la méthode rand() pour obtenir un nombre aléatoire.
-             tableauArray.add(randomNumber);            // On ajoute le nombre aléatoire à l'ArrayList.
-            System.out.println("Tableaux [" + (i + 0) + "] = " + randomNumber);         // On affiche l'indice qui commence a 0 et le nombre aléatoire.
-        } System.out.println("");
-    }
- 
-    // Ensuite, on a créé une méthode pour trouver le plus grand nombre dans notre ArrayList.
-    public void grande() {
-        int max;
-        max = tableauArray.get(0);      // On initialise 'max' avec le premier élément de l'ArrayList.
- 
-        for (int i = 0; i < tableauArray.size(); i++) {
-            if (tableauArray.get(i) > max) {        // On compare l'élément actuel avec 'max' en utilisant la boucle.
-                max = tableauArray.get(i);          // Ensuite on fait un affectation avec 'max' s'il y a un élément plus grand.
-             }
-         }   System.out.println("\nLe plus grand nombre du tableau est : " + max);          // On affiche le plus grand nombre dans l'ArrayList.
-     }
-     // Finalement, voici notre méthode pour afficher l'index de ce nombre.
-     public void inx() {
-         int grandeInx;
-         grandeInx = tableauArray.get(0);     // On initialise 'grandeInx' avec le premier élément de l'ArrayList.
-         int inx = 0;     // On initialise 'inx' pour suivre l'indice de la plus grande valeur.
 
-         for (int i = 0; i < tableauArray.size(); i++) {
-             int currentvalue = tableauArray.get(i);        // On obtient la valeur actuelle de l'ArrayList.
-             if (currentvalue > grandeInx) {      // On compare la valeur actuelle avec 'grandeInx'.
-                 grandeInx = currentvalue;        // On fait un affection avec 'grandeInx' s'il y a une valeur plus grande.
-                 inx = i;     // On fait un affection avec 'inx' avec l'indice de la plus grande valeur.
-             }
-         }
-         System.out.println("\nIl est a l'index : " + inx + "\n");        // On affiche l'indice qui contient le plus grande nombre dans l'ArrayList
-     }
- }
+    public void tableau() {
+        /**
+         * cette méthode est utilisée pour créér un tableau de 15 cellules qu'on
+         * initialise avec des nombres aléatoires, ensuite on appelle la méthode rand() pour
+         * obtenir un nombre aléatoire et on ajoute ce nombre à l'ArrayList. On affiche aussi
+         * l'indice qui commence a 0 avec le nombre aléatoire comme :
+         * 
+         * Tableau [0] = nombre aléatoires
+         * 
+         * @param index        Déclaration d'un tableau d'entiers avec 15 éléments.
+         * @param i            C'est un paramètre pour notre boucle
+         * @param randomNumber C'est un paramètre qui va stocker le nombre dans l'autre methode rand()
+         * @param tableauArray C'est un paramètre où on ajoute le nombre aléatoire
+         */
+        int[] index = new int[15];
+
+        for (int i = 0; i < index.length; i++) {
+            int randomNumber = rand();
+            tableauArray.add(randomNumber);
+            System.out.println("Tableaux [" + (i + 0) + "] = " + randomNumber);
+        }
+        System.out.println("");
+    }
+
+    public void grandeInx() {
+        /**
+         * cette méthode est utilisée pour afficher l'index du plus grand nombre.
+         * 
+         * @param grandeInx      C'est un paramètre pour stocker le plus grand nombre.
+         * @param i              C'est un paramètre pour notre boucle.
+         * @param inx            C'est un paramètre pour stocker l'indicen du plus grand nombre
+         * @param tableauArray   C'est un paramètre où on ajoute le nombre aléatoire
+         * @param valeurActuelle C'est un paramètre qu'on utilise pour stocker le
+         *                       valeur actuelle et pour la comparaison avec grandeInx
+         */
+        int grandeInx;
+        grandeInx = tableauArray.get(0); // On initialise 'grandeInx' avec le premier élément de l'ArrayList.
+        int inx = 0; // On initialise 'inx' pour suivre l'indice de la plus grande valeur.
+
+        for (int i = 0; i < tableauArray.size(); i++) {
+            int valeurActuelle = tableauArray.get(i); // On obtient la valeur actuelle de l'ArrayList.
+            if (valeurActuelle > grandeInx) { // On compare la valeur actuelle avec 'grandeInx'.
+                grandeInx = valeurActuelle; // On fait un affection avec 'grandeInx' s'il y a une valeur plus grande.
+                inx = i; // On fait un affection avec 'inx' avec l'indice de la plus grande valeur.
+            }
+        }
+        System.out.println("\nLe plus grand nombre de l'ArrayList est : " + grandeInx); // On affiche le plus grand nombre dans l'ArrayList
+
+        System.out.println("\nIl est a l'index : " + inx + "\n"); // On affiche l'indice qui contient le plus grande nombre dans l'ArrayList
+    }
+}
