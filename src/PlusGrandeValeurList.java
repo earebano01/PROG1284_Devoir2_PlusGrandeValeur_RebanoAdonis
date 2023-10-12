@@ -1,5 +1,7 @@
 import java.util.Random;
 
+import objet.LinkedList;
+
 public class PlusGrandeValeurList {
 
    // On declare une liste de tableaux (LinkedList) privée pour stocker les entiers.

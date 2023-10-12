@@ -1,20 +1,22 @@
+
+package objet;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-final class LLIterator<E> implements Iterator<E> {
-    private final LinkedList<E> list;
-    private Node<E> next;
+final class ALIterator<E> implements Iterator<E> {
+    private final ArrayList<E> list;
+    private int index;
     private boolean canRemove;
 
-    public LLIterator(LinkedList<E> list) {
+    public ALIterator(ArrayList<E> list) {
         this.list = list;
-        this.next = list.head.succ;
+        this.index = 0;
         this.canRemove = false;
     }
 
     @Override
     public boolean hasNext() {
-        return next != list.head;
+        return index < list.size();
     }
 
     @Override
@@ -22,16 +24,14 @@ final class LLIterator<E> implements Iterator<E> {
         if (! hasNext())
             throw new NoSuchElementException();
         canRemove = true;
-        E value = next.value;
-        next = next.succ;
-        return value;
+        return list.get(index++);
     }
 
     @Override
     public void remove() {
         if (! canRemove)
             throw new IllegalStateException();
-        list.removeNode(next.pred);
+        list.remove(index - 1);
         canRemove = false;
     }
 }

@@ -1,3 +1,4 @@
+package objet;
 import java.util.Iterator;
 
 public final class LinkedList<E> implements List<E> {

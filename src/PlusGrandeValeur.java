@@ -1,5 +1,7 @@
 import java.util.Random;
 
+import objet.ArrayList;
+
 public class PlusGrandeValeur {
    
    // On declare une liste de tableaux (ArrayList) privée pour stocker les entiers.

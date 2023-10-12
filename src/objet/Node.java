@@ -1,3 +1,4 @@
+package objet;
 class Node<E> {
     public Node<E> succ, pred;
     public E value;
