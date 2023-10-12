@@ -1,6 +1,5 @@
-import java.util.Random;
-
 import objet.ArrayList;
+import java.util.Random;
 
 public class PlusGrandeValeur {
    

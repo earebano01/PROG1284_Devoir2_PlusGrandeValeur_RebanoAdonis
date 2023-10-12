@@ -1,6 +1,6 @@
+import objet.LinkedList;
 import java.util.Random;
 
-import objet.LinkedList;
 
 public class PlusGrandeValeurList {
 
