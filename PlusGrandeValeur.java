@@ -19,7 +19,7 @@ public class PlusGrandeValeur {
             if (h != 0)
             break;
         }
-        return h;       // Renvoie l'entier aléatoire généré.
+        return h;       // Retourne l'entier aléatoire généré.
     }
     
     // On a créé une methode pour un tableau de 15 cellules qu'on initialise avec des nombres aléatoires 
@@ -29,34 +29,34 @@ public class PlusGrandeValeur {
         for (int i = 0; i < index.length; i++) {
              int randomNumber = rand();         // On appelle la méthode rand() pour obtenir un nombre aléatoire.
              tableauArray.add(randomNumber);            // On ajoute le nombre aléatoire à l'ArrayList.
-            System.out.println("Tableaux [" + (i + 0) + "] = " + randomNumber);         // on affiche l'indice qui commence a 0 et le nombre aléatoire.
+            System.out.println("Tableaux [" + (i + 0) + "] = " + randomNumber);         // On affiche l'indice qui commence a 0 et le nombre aléatoire.
         } System.out.println("");
     }
  
     // Ensuite, on a créé une méthode pour trouver le plus grand nombre dans notre ArrayList.
     public void grande() {
         int max;
-        max = tableauArray.get(0);      // on initialise 'max' avec le premier élément de l'ArrayList.
+        max = tableauArray.get(0);      // On initialise 'max' avec le premier élément de l'ArrayList.
  
         for (int i = 0; i < tableauArray.size(); i++) {
-            if (tableauArray.get(i) > max) {        // on compare l'élément actuel avec 'max' en utilisant la boucle.
-                max = tableauArray.get(i);          // ensuite on fait un affectation avec 'max' s'il y a un élément plus grand.
+            if (tableauArray.get(i) > max) {        // On compare l'élément actuel avec 'max' en utilisant la boucle.
+                max = tableauArray.get(i);          // Ensuite on fait un affectation avec 'max' s'il y a un élément plus grand.
              }
-         }   System.out.println("\nLe plus grand nombre du tableau est : " + max);          // on affiche le plus grand nombre dans l'ArrayList.
+         }   System.out.println("\nLe plus grand nombre du tableau est : " + max);          // On affiche le plus grand nombre dans l'ArrayList.
      }
      // Finalement, voici notre méthode pour afficher l'index de ce nombre.
      public void inx() {
          int grandeInx;
-         grandeInx = tableauArray.get(0);     // on initialise 'grandeInx' avec le premier élément de l'ArrayList.
-         int inx = 0;     // on initialise 'inx' pour suivre l'indice de la plus grande valeur.
+         grandeInx = tableauArray.get(0);     // On initialise 'grandeInx' avec le premier élément de l'ArrayList.
+         int inx = 0;     // On initialise 'inx' pour suivre l'indice de la plus grande valeur.
 
          for (int i = 0; i < tableauArray.size(); i++) {
-             int currentvalue = tableauArray.get(i);        // on obtient la valeur actuelle de l'ArrayList.
-             if (currentvalue > grandeInx) {      // on compare la valeur actuelle avec 'grandeInx'.
-                 grandeInx = currentvalue;        // on fait un affection avec 'grandeInx' s'il y a une valeur plus grande.
-                 inx = i;     // on fait un affection avec 'inx' avec l'indice de la plus grande valeur.
+             int currentvalue = tableauArray.get(i);        // On obtient la valeur actuelle de l'ArrayList.
+             if (currentvalue > grandeInx) {      // On compare la valeur actuelle avec 'grandeInx'.
+                 grandeInx = currentvalue;        // On fait un affection avec 'grandeInx' s'il y a une valeur plus grande.
+                 inx = i;     // On fait un affection avec 'inx' avec l'indice de la plus grande valeur.
              }
          }
-         System.out.println("\nIl est a l'index : " + inx + "\n");        // on affiche l'indice qui contient le plus grande nombre dans l'ArrayList
+         System.out.println("\nIl est a l'index : " + inx + "\n");        // On affiche l'indice qui contient le plus grande nombre dans l'ArrayList
      }
  }
