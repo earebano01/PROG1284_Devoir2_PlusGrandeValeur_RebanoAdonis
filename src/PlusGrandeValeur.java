@@ -12,7 +12,7 @@ public class PlusGrandeValeur {
 
     public static int rand() {
         /**
-         * cette méthode est utilisée pour générer des nombres aléatoires entre 0-100
+         * Cette méthode est utilisée pour générer des nombres aléatoires entre 0-100
          * à l'aide de la classe random.
          * 
          * @oaram hasard C'est un nom du notre classe pour générer des nombre aléatoire
@@ -31,7 +31,7 @@ public class PlusGrandeValeur {
 
     public void tableau() {
         /**
-         * cette méthode est utilisée pour créér un tableau de 15 cellules qu'on
+         * Cette méthode est utilisée pour créér un tableau de 15 cellules qu'on
          * initialise avec des nombres aléatoires, ensuite on appelle la méthode rand() pour
          * obtenir un nombre aléatoire et on ajoute ce nombre à l'ArrayList. On affiche aussi
          * l'indice qui commence a 0 avec le nombre aléatoire comme :
@@ -55,7 +55,7 @@ public class PlusGrandeValeur {
 
     public void grandeInx() {
         /**
-         * cette méthode est utilisée pour afficher l'index du plus grand nombre.
+         * Cette méthode est utilisée pour afficher l'index du plus grand nombre.
          * 
          * @param grandeInx      C'est un paramètre pour stocker le plus grand nombre.
          * @param i              C'est un paramètre pour notre boucle.

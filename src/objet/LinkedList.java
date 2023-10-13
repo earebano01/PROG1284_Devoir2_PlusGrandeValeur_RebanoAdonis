@@ -4,7 +4,7 @@ import java.util.Iterator;
 public final class LinkedList<E> implements List<E> {
     private int size;
     final Node<E> head;
-
+    
     public LinkedList() {
         Node<E> head = new Node<>(null);
         head.succ = head.pred = head;
